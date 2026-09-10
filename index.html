@@ -1,872 +1,663 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-
-    <title>Track4Career | Career Platform</title>
+    <title>SkillBridge AI - Student Portal</title>
 
     <link rel="stylesheet" href="style.css">
-
 </head>
 
-
 <body>
-
 
 <!-- ================= NAVBAR ================= -->
 
 <nav class="navbar">
 
     <div class="logo">
-        Track4Career
+        🎓 SkillBridge <span>AI</span>
     </div>
 
-
     <div class="nav-links">
-
         <a href="#home">Home</a>
-
-        <a href="#register">Register</a>
-
-        <a href="#dashboard">Dashboard</a>
-
-        <a href="#internships">Internships</a>
-
+        <a href="#features">Features</a>
+        <button onclick="openLogin()">Student Login</button>
     </div>
 
 </nav>
 
 
-
-<!-- ================= HOME ================= -->
+<!-- ================= HERO ================= -->
 
 <section id="home" class="hero">
 
-    <div class="hero-content">
+    <div class="hero-text">
 
-        <span class="badge">
-            SIH 2026 PROJECT
-        </span>
-
+        <span class="badge">AI Powered Career Platform</span>
 
         <h1>
-
-            Track Your Skills.<br>
-
-            Track Your Career.
-
+            Build Skills.<br>
+            Get Industry Ready.
         </h1>
 
-
         <p>
-
-            Track4Career connects students, academia
-            and industry through skill mapping,
-            internships and placement opportunities.
-
+            SkillBridge AI connects students with industries through
+            skill assessment, personalized learning and smart placement
+            matching.
         </p>
 
+        <button class="primary-btn" onclick="openLogin()">
+            🚀 Student Login
+        </button>
 
-        <button onclick="goToRegistration()">
-
-            Start Your Career Journey
-
+        <button class="secondary-btn" onclick="scrollToFeatures()">
+            Explore Platform
         </button>
 
     </div>
 
-</section>
 
+    <div class="hero-card">
 
+        <div class="card-icon">🎯</div>
 
-<!-- ================= PROBLEM ================= -->
+        <h3>Smart Career Matching</h3>
 
-<section class="section">
-
-    <h2>
-        Why Track4Career?
-    </h2>
-
-
-    <p class="section-description">
-
-        Helping students understand their skills
-        and become industry ready.
-
-    </p>
-
-
-    <div class="cards">
-
-
-        <div class="card">
-
-            <div class="icon">
-                🧠
-            </div>
-
-            <h3>
-                Skill Mapping
-            </h3>
-
-            <p>
-
-                Understand your current skills
-                and compare them with industry needs.
-
-            </p>
-
-        </div>
-
-
-
-        <div class="card">
-
-            <div class="icon">
-                📊
-            </div>
-
-            <h3>
-                Skill Gap
-            </h3>
-
-            <p>
-
-                Identify missing skills required
-                for your target career.
-
-            </p>
-
-        </div>
-
-
-
-        <div class="card">
-
-            <div class="icon">
-                💼
-            </div>
-
-            <h3>
-                Internships
-            </h3>
-
-            <p>
-
-                Discover internship opportunities
-                matching your skills.
-
-            </p>
-
-        </div>
-
-
-
-        <div class="card">
-
-            <div class="icon">
-                🎯
-            </div>
-
-            <h3>
-                Placements
-            </h3>
-
-            <p>
-
-                Improve your placement readiness
-                with personalized career tracking.
-
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- ================= REGISTRATION ================= -->
-
-<section id="register" class="registration">
-
-    <div class="form-container">
-
-        <h2>
-            Student Registration
-        </h2>
-
-
-        <p class="section-description">
-
-            Create your Track4Career profile.
-
+        <p>
+            Analyze your skills and discover internships,
+            projects and placement opportunities.
         </p>
 
-
-        <form id="studentForm">
-
-
-            <!-- NAME -->
-
-            <label>
-                Full Name
-            </label>
-
-            <input
-                type="text"
-                id="name"
-                placeholder="Enter your full name"
-                required
-            >
-
-
-
-            <!-- EMAIL -->
-
-            <label>
-                Email
-            </label>
-
-            <input
-                type="email"
-                id="email"
-                placeholder="Enter your email"
-                required
-            >
-
-
-
-            <!-- COLLEGE -->
-
-            <label>
-                College Name
-            </label>
-
-            <input
-                type="text"
-                id="college"
-                placeholder="Enter your college"
-                required
-            >
-
-
-
-            <!-- BRANCH -->
-
-            <label>
-                Branch
-            </label>
-
-            <select id="branch" required>
-
-                <option value="">
-                    Select your branch
-                </option>
-
-                <option value="Computer Science">
-                    Computer Science
-                </option>
-
-                <option value="Information Technology">
-                    Information Technology
-                </option>
-
-                <option value="Electronics">
-                    Electronics
-                </option>
-
-                <option value="Electrical">
-                    Electrical
-                </option>
-
-                <option value="Mechanical">
-                    Mechanical
-                </option>
-
-                <option value="Civil">
-                    Civil
-                </option>
-
-                <option value="Other">
-                    Other
-                </option>
-
-            </select>
-
-
-
-            <!-- YEAR -->
-
-            <label>
-                Year of Study
-            </label>
-
-            <select id="year" required>
-
-                <option value="">
-                    Select year
-                </option>
-
-                <option value="1st Year">
-                    1st Year
-                </option>
-
-                <option value="2nd Year">
-                    2nd Year
-                </option>
-
-                <option value="3rd Year">
-                    3rd Year
-                </option>
-
-                <option value="4th Year">
-                    4th Year
-                </option>
-
-            </select>
-
-
-
-            <!-- CAREER -->
-
-            <label>
-                Career Goal
-            </label>
-
-            <select id="career" required>
-
-                <option value="">
-                    Select your career
-                </option>
-
-                <option value="Full Stack Developer">
-                    Full Stack Developer
-                </option>
-
-                <option value="Data Analyst">
-                    Data Analyst
-                </option>
-
-                <option value="Data Scientist">
-                    Data Scientist
-                </option>
-
-                <option value="AI/ML Engineer">
-                    AI/ML Engineer
-                </option>
-
-                <option value="Cyber Security">
-                    Cyber Security
-                </option>
-
-                <option value="Cloud Engineer">
-                    Cloud Engineer
-                </option>
-
-            </select>
-
-
-
-            <!-- SKILLS -->
-
-            <label>
-                Select Your Skills
-            </label>
-
-
-            <div class="skills-grid">
-
-
-                <label class="skill">
-
-                    <input
-                        type="checkbox"
-                        value="HTML"
-                        name="skills"
-                    >
-
-                    HTML
-
-                </label>
-
-
-
-                <label class="skill">
-
-                    <input
-                        type="checkbox"
-                        value="CSS"
-                        name="skills"
-                    >
-
-                    CSS
-
-                </label>
-
-
-
-                <label class="skill">
-
-                    <input
-                        type="checkbox"
-                        value="JavaScript"
-                        name="skills"
-                    >
-
-                    JavaScript
-
-                </label>
-
-
-
-                <label class="skill">
-
-                    <input
-                        type="checkbox"
-                        value="React"
-                        name="skills"
-                    >
-
-                    React
-
-                </label>
-
-
-
-                <label class="skill">
-
-                    <input
-                        type="checkbox"
-                        value="Python"
-                        name="skills"
-                    >
-
-                    Python
-
-                </label>
-
-
-
-                <label class="skill">
-
-                    <input
-                        type="checkbox"
-                        value="Java"
-                        name="skills"
-                    >
-
-                    Java
-
-                </label>
-
-
-
-                <label class="skill">
-
-                    <input
-                        type="checkbox"
-                        value="SQL"
-                        name="skills"
-                    >
-
-                    SQL
-
-                </label>
-
-
-
-                <label class="skill">
-
-                    <input
-                        type="checkbox"
-                        value="Git"
-                        name="skills"
-                    >
-
-                    Git
-
-                </label>
-
-
-
-                <label class="skill">
-
-                    <input
-                        type="checkbox"
-                        value="AWS"
-                        name="skills"
-                    >
-
-                    AWS
-
-                </label>
-
-
-
-                <label class="skill">
-
-                    <input
-                        type="checkbox"
-                        value="Machine Learning"
-                        name="skills"
-                    >
-
-                    Machine Learning
-
-                </label>
-
+        <div class="mini-stats">
+
+            <div>
+                <strong>95%</strong>
+                <small>Skill Match</small>
             </div>
 
+            <div>
+                <strong>120+</strong>
+                <small>Opportunities</small>
+            </div>
 
+            <div>
+                <strong>50+</strong>
+                <small>Companies</small>
+            </div>
 
-            <button type="submit">
-
-                Create My Profile
-
-            </button>
-
-
-        </form>
+        </div>
 
     </div>
 
 </section>
 
+
+<!-- ================= FEATURES ================= -->
+
+<section id="features" class="section">
+
+    <div class="section-title">
+
+        <span>PLATFORM FEATURES</span>
+
+        <h2>Everything a Student Needs</h2>
+
+        <p>
+            From skill assessment to placement opportunities,
+            everything is available in one platform.
+        </p>
+
+    </div>
+
+
+    <div class="feature-grid">
+
+        <div class="feature-card">
+            <div class="feature-icon">🧠</div>
+            <h3>Skill Assessment</h3>
+            <p>
+                Evaluate programming, communication,
+                problem solving and other industry skills.
+            </p>
+        </div>
+
+
+        <div class="feature-card">
+            <div class="feature-icon">📊</div>
+            <h3>Skill Gap Analysis</h3>
+            <p>
+                Identify your weak areas and understand
+                what skills you need to improve.
+            </p>
+        </div>
+
+
+        <div class="feature-card">
+            <div class="feature-icon">💼</div>
+            <h3>Placement Matching</h3>
+            <p>
+                Find jobs and internships based on
+                your skill profile.
+            </p>
+        </div>
+
+
+        <div class="feature-card">
+            <div class="feature-icon">📚</div>
+            <h3>Learning Path</h3>
+            <p>
+                Receive personalized learning recommendations
+                based on your skill gaps.
+            </p>
+        </div>
+
+    </div>
+
+</section>
 
 
 <!-- ================= DASHBOARD ================= -->
 
-<section id="dashboard" class="dashboard">
+<section id="dashboard" class="dashboard-section hidden">
 
-    <h2>
-        Student Dashboard
-    </h2>
+    <div class="dashboard-header">
+
+        <div>
+            <span class="badge">STUDENT DASHBOARD</span>
+
+            <h1>
+                Welcome, <span id="studentName">Student</span> 👋
+            </h1>
+
+            <p>
+                Track your skills, opportunities and placement readiness.
+            </p>
+        </div>
+
+        <button class="logout-btn" onclick="logout()">
+            Logout
+        </button>
+
+    </div>
 
 
-    <div id="welcomeMessage">
+    <!-- PROFILE -->
 
-        <p>
-            Register to see your dashboard.
+    <div class="dashboard-grid">
+
+        <div class="profile-card">
+
+            <div class="profile-avatar" id="profileAvatar">
+                S
+            </div>
+
+            <h2 id="profileName">
+                Student
+            </h2>
+
+            <p id="profileEmail">
+                student@email.com
+            </p>
+
+            <p>
+                Student ID:
+                <strong id="profileID">---</strong>
+            </p>
+
+            <div class="profile-status">
+                🟢 Profile Active
+            </div>
+
+        </div>
+
+
+        <!-- READINESS -->
+
+        <div class="readiness-card">
+
+            <h3>Career Readiness</h3>
+
+            <div class="readiness-circle">
+
+                <strong id="readinessScore">
+                    0%
+                </strong>
+
+                <span>Ready</span>
+
+            </div>
+
+            <p id="readinessText">
+                Complete your skill assessment.
+            </p>
+
+        </div>
+
+
+        <!-- SKILL SUMMARY -->
+
+        <div class="skills-card">
+
+            <h3>Skill Summary</h3>
+
+            <div id="skillSummary">
+
+                <p>
+                    No assessment completed yet.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ACTION BUTTONS -->
+
+    <div class="dashboard-actions">
+
+        <button class="action-btn" onclick="openAssessment()">
+            🧠 Take Skill Assessment
+        </button>
+
+        <button class="action-btn" onclick="showPlacements()">
+            💼 View Placements
+        </button>
+
+        <button class="action-btn" onclick="showLearningPath()">
+            📚 Learning Path
+        </button>
+
+    </div>
+
+
+    <!-- PLACEMENTS -->
+
+    <div id="placementSection" class="dashboard-panel hidden">
+
+        <div class="panel-heading">
+
+            <div>
+                <span class="badge">SMART MATCHING</span>
+
+                <h2>
+                    Recommended Opportunities
+                </h2>
+            </div>
+
+            <span class="match-label">
+                Based on your skills
+            </span>
+
+        </div>
+
+        <div id="placementList"></div>
+
+    </div>
+
+
+    <!-- LEARNING PATH -->
+
+    <div id="learningSection" class="dashboard-panel hidden">
+
+        <span class="badge">
+            PERSONALIZED LEARNING
+        </span>
+
+        <h2>
+            Your Recommended Learning Path
+        </h2>
+
+        <div id="learningList"></div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= LOGIN MODAL ================= -->
+
+<div id="loginModal" class="modal">
+
+    <div class="modal-content">
+
+        <button class="close-btn" onclick="closeModal()">
+            ×
+        </button>
+
+        <div class="modal-icon">
+            🔐
+        </div>
+
+        <h2>Student Login</h2>
+
+        <p class="modal-description">
+            Enter your details to access your career dashboard.
         </p>
 
+
+        <label>Full Name</label>
+
+        <input
+            type="text"
+            id="loginName"
+            placeholder="Enter your full name"
+        >
+
+
+        <label>Email</label>
+
+        <input
+            type="email"
+            id="loginEmail"
+            placeholder="student@example.com"
+        >
+
+
+        <label>Student ID</label>
+
+        <input
+            type="text"
+            id="loginID"
+            placeholder="Enter student ID"
+        >
+
+
+        <label>Branch</label>
+
+        <select id="loginBranch">
+
+            <option value="">
+                Select Branch
+            </option>
+
+            <option>CSE</option>
+            <option>AIML</option>
+            <option>ECE</option>
+            <option>EEE</option>
+            <option>Mechanical Engineering</option>
+            <option>Chemical Engineering</option>
+
+        </select>
+
+
+        <button
+            class="primary-btn full-btn"
+            onclick="loginStudent()"
+        >
+            Login to Dashboard
+        </button>
+
     </div>
 
+</div>
 
 
-    <div
-        id="dashboardContent"
-        class="dashboard-content hidden"
-    >
+<!-- ================= ASSESSMENT MODAL ================= -->
+
+<div id="assessmentModal" class="modal">
+
+    <div class="modal-content assessment-content">
+
+        <button class="close-btn" onclick="closeModal()">
+            ×
+        </button>
+
+        <span class="badge">
+            SKILL ASSESSMENT
+        </span>
+
+        <h2>
+            Evaluate Your Skills
+        </h2>
+
+        <p class="modal-description">
+            Rate your current skill level from 1 to 10.
+        </p>
 
 
-        <!-- PROFILE -->
+        <div class="question">
 
-        <div class="profile-card">
+            <label>
+                1. Programming
+            </label>
 
-            <h3>
-                👤 Student Profile
-            </h3>
+            <select id="programming">
 
+                <option value="1">1 - Beginner</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 - Average</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10 - Expert</option>
 
-            <p>
-                <strong>Name:</strong>
-
-                <span id="displayName">
-                </span>
-            </p>
-
-
-            <p>
-                <strong>College:</strong>
-
-                <span id="displayCollege">
-                </span>
-            </p>
-
-
-            <p>
-                <strong>Branch:</strong>
-
-                <span id="displayBranch">
-                </span>
-            </p>
-
-
-            <p>
-                <strong>Career:</strong>
-
-                <span id="displayCareer">
-                </span>
-            </p>
-
+            </select>
 
         </div>
 
 
+        <div class="question">
 
-        <!-- SCORE -->
+            <label>
+                2. Problem Solving
+            </label>
 
-        <div class="score-card">
+            <select id="problemSolving">
 
-            <h3>
-                🎯 Industry Skill Match
-            </h3>
+                <option value="1">1 - Beginner</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 - Average</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10 - Expert</option>
+
+            </select>
+
+        </div>
 
 
-            <div
-                id="skillScore"
-                class="score"
-            >
+        <div class="question">
+
+            <label>
+                3. SQL / Database
+            </label>
+
+            <select id="database">
+
+                <option value="1">1 - Beginner</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 - Average</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10 - Expert</option>
+
+            </select>
+
+        </div>
+
+
+        <div class="question">
+
+            <label>
+                4. Communication
+            </label>
+
+            <select id="communication">
+
+                <option value="1">1 - Beginner</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 - Average</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10 - Expert</option>
+
+            </select>
+
+        </div>
+
+
+        <div class="question">
+
+            <label>
+                5. Project Experience
+            </label>
+
+            <select id="projects">
+
+                <option value="1">1 - Beginner</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 - Average</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10 - Expert</option>
+
+            </select>
+
+        </div>
+
+
+        <div class="question">
+
+            <label>
+                6. Git / GitHub
+            </label>
+
+            <select id="github">
+
+                <option value="1">1 - Beginner</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 - Average</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10 - Expert</option>
+
+            </select>
+
+        </div>
+
+
+        <button
+            class="primary-btn full-btn"
+            onclick="calculateAssessment()"
+        >
+            Analyze My Skills
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- ================= RESULT MODAL ================= -->
+
+<div id="resultModal" class="modal">
+
+    <div class="modal-content">
+
+        <button class="close-btn" onclick="closeModal()">
+            ×
+        </button>
+
+        <span class="badge">
+            ASSESSMENT RESULT
+        </span>
+
+        <h2>
+            Your Skill Analysis
+        </h2>
+
+
+        <div class="score-circle">
+
+            <strong id="resultScore">
                 0%
-            </div>
+            </strong>
 
-
-            <div class="progress-container">
-
-                <div
-                    id="progressBar"
-                    class="progress"
-                >
-                </div>
-
-            </div>
-
-
-            <p id="scoreMessage">
-
-            </p>
+            <span>
+                Overall Score
+            </span>
 
         </div>
 
 
-
-        <!-- SKILLS -->
-
-        <div class="profile-card">
-
-            <h3>
-                🧠 Your Skills
-            </h3>
+        <h3 id="resultLevel">
+            Beginner
+        </h3>
 
 
-            <div id="displaySkills">
-
-            </div>
-
-        </div>
+        <p id="resultMessage"></p>
 
 
+        <h3>
+            Skill Gaps
+        </h3>
 
-        <!-- SKILL GAP -->
-
-        <div class="profile-card">
-
-            <h3>
-                📚 Recommended Skills
-            </h3>
-
-
-            <p>
-
-                Skills you should learn for your
-                selected career:
-
-            </p>
+        <div
+            id="gapList"
+            class="gap-list"
+        ></div>
 
 
-            <div id="skillGap">
-
-            </div>
-
-        </div>
-
+        <button
+            class="primary-btn full-btn"
+            onclick="closeModal(); showLearningPath();"
+        >
+            View Learning Path
+        </button>
 
     </div>
 
-</section>
-
-
-
-<!-- ================= INTERNSHIPS ================= -->
-
-<section id="internships" class="section">
-
-    <h2>
-        Internship Opportunities
-    </h2>
-
-
-    <p class="section-description">
-
-        Opportunities based on industry skills.
-
-    </p>
-
-
-
-    <div class="opportunity-container">
-
-
-        <div class="opportunity">
-
-            <span class="internship-label">
-                TECHNOLOGY
-            </span>
-
-
-            <h3>
-                Software Development Intern
-            </h3>
-
-
-            <p>
-                Skills: HTML, CSS, JavaScript, Git
-            </p>
-
-
-            <p>
-                Mode: Remote
-            </p>
-
-
-            <button onclick="showInternship()">
-
-                View Opportunity
-
-            </button>
-
-        </div>
-
-
-
-        <div class="opportunity">
-
-            <span class="internship-label">
-                DATA
-            </span>
-
-
-            <h3>
-                Data Analyst Intern
-            </h3>
-
-
-            <p>
-                Skills: Python, SQL, Excel
-            </p>
-
-
-            <p>
-                Mode: Hybrid
-            </p>
-
-
-            <button onclick="showInternship()">
-
-                View Opportunity
-
-            </button>
-
-        </div>
-
-
-
-        <div class="opportunity">
-
-            <span class="internship-label">
-                AI
-            </span>
-
-
-            <h3>
-                Machine Learning Intern
-            </h3>
-
-
-            <p>
-                Skills: Python, Machine Learning
-            </p>
-
-
-            <p>
-                Mode: Remote
-            </p>
-
-
-            <button onclick="showInternship()">
-
-                View Opportunity
-
-            </button>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- ================= PLACEMENT ================= -->
-
-<section class="placement">
-
-    <h2>
-        Become Placement Ready
-    </h2>
-
-
-    <p>
-
-        Build the right skills.
-        Gain industry experience.
-        Track your career.
-
-    </p>
-
-
-    <button onclick="goToRegistration()">
-
-        Build My Profile
-
-    </button>
-
-</section>
-
+</div>
 
 
 <!-- ================= FOOTER ================= -->
 
 <footer>
 
-    <h3>
-        Track4Career
-    </h3>
-
+    <div class="logo">
+        🎓 SkillBridge <span>AI</span>
+    </div>
 
     <p>
-        Academia × Industry Collaboration Platform
+        AI-powered Academia–Industry Collaboration Platform
     </p>
 
-
     <p>
-        Smart India Hackathon Project
+        SIH 2026 Prototype
     </p>
 
 </footer>
 
 
-
 <script src="script.js"></script>
 
-
 </body>
-
 </html>
+```
